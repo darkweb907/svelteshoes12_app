@@ -131,5 +131,4 @@
 	.animate-typewriter {
 		animation: typewriter 0.3s ease forwards;
 	}
-	g
 </style>
