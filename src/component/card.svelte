@@ -1,0 +1,302 @@
+<script>
+	import { onMount } from 'svelte';
+	import { gsap } from 'gsap';
+	// import Welcome from '$lib/images/s.png';
+	import weldone from '$lib/images/sax.avif';
+	import sand from '$lib/images/sax1.avif';
+	import logo from '$lib/images/sax2.avif';
+	import Test from './test.svelte';
+	import Footer from './footer.svelte';
+
+	let images = [
+		weldone,
+		sand,
+		logo
+		// Add more image URLs as needed
+	];
+
+	// text animation
+
+	let isTextVisible = false;
+	let typewriterHeading = '';
+
+	function showText() {
+		isTextVisible = true;
+	}
+
+	function typewriterAnimation() {
+		let characters = "Segun Odumosu And The Afrocano's Band";
+		let index = 0;
+
+		function type() {
+			if (index < characters.length) {
+				typewriterHeading += characters[index];
+				index++;
+				setTimeout(type, 100); // Adjust the delay between characters
+			}
+		}
+
+		type();
+	}
+
+	// swiper begins here
+	let currentIndex = 0;
+
+	onMount(() => {
+		const tl = gsap.timeline({ repeat: -1 });
+
+		tl.to('.carousel', { duration: 2, autoAlpha: 1, onComplete: showText });
+		typewriterAnimation();
+	});
+</script>
+
+<div class=" carousel bg-center flex flex-col items-center justify-center text-white px-5">
+	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
+		{#if isTextVisible}
+			{#each Array.from(typewriterHeading) as char, i}
+				<span class="opacity-0 animate-typewriter" style="animation-delay: {i * 0.1}s;">{char}</span
+				>
+			{/each}
+		{/if}
+	</h1>
+	<p class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center">
+		Experience the soulful rhythm and energy of our music.
+	</p>
+	<div class="  {isTextVisible ? 'fade-in' : ''} flex flex-col md:flex-row gap-3">
+		<a href="#flush" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded"
+			>Learn More about us</a
+		>
+		<a href="/music" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
+			>Listen to my Music</a
+		>
+	</div>
+</div>
+
+<section class="container mx-auto text-center">
+	<div
+		class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-x-4 md:space-y-0"
+	>
+		<!-- First div -->
+		<div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+			<i class="fas fa-camera text-2xl mb-2" />
+			<h3 class="text-lg font-semibold mb-1">Photography</h3>
+			<p class="text-gray-600">Capture beautiful moments with our interior photography services.</p>
+		</div>
+
+		<!-- Second div -->
+		<div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+			<i class="fas fa-heart text-2xl mb-2" />
+			<h3 class="text-lg font-semibold mb-1">Decor</h3>
+			<p class="text-gray-600">Discover exquisite decor pieces that transform your space.</p>
+		</div>
+
+		<!-- Third div -->
+		<div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
+			<i class="fas fa-star text-2xl mb-2" />
+			<h3 class="text-lg font-semibold mb-1">Design</h3>
+			<p class="text-gray-600">Elevate your interiors with our innovative design solutions.</p>
+		</div>
+	</div>
+
+	<!-- Interior design description -->
+</section>
+
+<!-- End new section-->
+
+<section class="mt-7 py-16" id="flush">
+	<div class="max-w-7xl mx-auto px-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+			<!-- Left column: heading and text -->
+			<div>
+				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
+				<p class="text-gray-600 text-xl text-justify">
+					Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+					there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
+					the Semantics, a large language ocean.
+				</p>
+			</div>
+
+			<!-- Right column: image -->
+			<div class="md:order-last">
+				<img src={sand} alt="Interior Design" class="w-full shadow-md" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="mt-7 py-16 bg-slate-50" id="paint">
+	<div class="max-w-7xl mx-auto px-4">
+		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+			<!-- Left column: heading and text -->
+			<div>
+				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
+				<p class="text-gray-600 text-xl text-justify">
+					Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+					there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
+					the Semantics, a large language ocean.
+				</p>
+			</div>
+
+			<!-- Right column: image -->
+			<div class="md:order-first">
+				<img src={weldone} alt="Interior Design" class="w-full shadow-md" />
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- project -->
+
+<section class="py-16" id="draught">
+	<div class="max-w-4xl mx-auto px-4 container mx-auto">
+		<div class="text-center">
+			<h2 class="text-3xl font-semibold mb-4">Our Projects</h2>
+			<p class="text-gray-600 leading-relaxed">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit,
+				necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.
+			</p>
+		</div>
+
+		<!-- grid with image -->
+
+		<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-8">
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for each image -->
+			<div
+				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
+			>
+				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<div
+					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
+				/>
+				<div
+					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+				>
+					<p class="text-white text-center font-semibold">Image 1</p>
+				</div>
+			</div>
+			<!-- Repeat for other images -->
+		</div>
+	</div>
+</section>
+
+<section>
+	<Test />
+</section>
+
+<footer>
+	<Footer />
+</footer>
+
+<style>
+	section {
+		font-family: 'Open Sans', sans-serif;
+	}
+	.carousel {
+		background-image: url($lib/images/sax.avif);
+		position: relative;
+		top: -85px;
+		left: 0;
+		width: 100%;
+		height: 100vh;
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+		/* Add an overlay to the background image */
+	}
+	.carousel::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); /* Adjust the color and opacity here */
+		z-index: -1;
+	}
+
+	@keyframes typewriter {
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+
+	.animate-typewriter {
+		animation: typewriter 0.3s ease forwards;
+	}
+	@media (max-width: 800px) {
+		.carousel {
+			height: 60vh;
+		}
+	}
+</style>
