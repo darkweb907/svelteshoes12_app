@@ -131,9 +131,5 @@
 	.animate-typewriter {
 		animation: typewriter 0.3s ease forwards;
 	}
-	@media (max-width: 800px) {
-		.carousel-item {
-			height: 80vh;
-		}
-	}
+	g
 </style>
