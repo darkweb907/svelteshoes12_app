@@ -2,18 +2,16 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
-	import weldone from '$lib/images/sax.avif';
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
+	import weldone from '$lib/images/pop1.jpg';
+	import sand from '$lib/images/furniture1.jpg';
+	import chair from '$lib/images/chair.jpg';
+	import fork from '$lib/images/furniture.jpg';
+	import pop from '$lib/images/pop.jpg';
+	import paint from '$lib/images/paint.jpg';
+	import draw from '$lib/images/draw.jpg';
+	import bed from '$lib/images/bed.jpg';
 	import Test from './test.svelte';
 	import Footer from './footer.svelte';
-
-	let images = [
-		weldone,
-		sand,
-		logo
-		// Add more image URLs as needed
-	];
 
 	// text animation
 
@@ -164,84 +162,84 @@
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={pop} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">POP</p>
 				</div>
 			</div>
 			<!-- Repeat for each image -->
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={chair} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">Chair</p>
 				</div>
 			</div>
 			<!-- Repeat for each image -->
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={fork} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">Furniture</p>
 				</div>
 			</div>
 			<!-- Repeat for each image -->
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={draw} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">DRAW</p>
 				</div>
 			</div>
 			<!-- Repeat for each image -->
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={paint} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">PAINT</p>
 				</div>
 			</div>
 			<!-- Repeat for each image -->
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
-				<img src={logo} alt="Image 1" class="w-full h-full object-cover" />
+				<img src={bed} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
 				/>
 				<div
 					class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
 				>
-					<p class="text-white text-center font-semibold">Image 1</p>
+					<p class="text-white text-center font-semibold">BED</p>
 				</div>
 			</div>
 			<!-- Repeat for other images -->
@@ -262,9 +260,9 @@
 		font-family: 'Open Sans', sans-serif;
 	}
 	.carousel {
-		background-image: url($lib/images/sax.avif);
+		background-image: url($lib/images/interiors.jpg);
 		position: relative;
-		top: -85px;
+		top: -92px;
 		left: 0;
 		width: 100%;
 		height: 100vh;

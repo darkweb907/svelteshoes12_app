@@ -2,16 +2,16 @@
 	import Navbar from '../component/navbar.svelte';
 
 	const navLinks = [
-		{ text: 'Segun Odumsu Band', url: '/music' },
+		{ text: 'Segun Odumosu Band', url: '/music' },
 		{ text: 'Jazzon Interior', url: '/interior' },
 		{ text: 'Leather Work', url: '/shoes' }
 	];
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
-	import welcome from '$lib/images/sax.avif';
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
+	import welcome from '$lib/images/furniture1.jpg';
+	import sand from '$lib/images/seg.jpg';
+	import logo from '$lib/images/song.jpg';
 
 	let images = [
 		welcome,
@@ -103,10 +103,10 @@
 		position: fixed;
 		top: 0;
 		left: 0;
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
 		background-size: cover;
-		background-position: center;
+		background-position: center center;
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}

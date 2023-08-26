@@ -1,7 +1,7 @@
 <!-- src/components/Navbar.svelte -->
 <script>
 	import { scale } from 'svelte/transition';
-	import logo from '$lib/images/logo.png';
+	import logo from '$lib/images/logo1.png';
 
 	export let links = [];
 
@@ -16,7 +16,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16 px-4">
 			<div transition:scale class="flex-shrink-0 mage">
-				<a href="/"><img class=" mt-5 w-1/3 md:w-1/2" src={logo} alt="Logo" /></a>
+				<a href="/"><img class=" mt-5 w-1/3 md:w-1/3" src={logo} alt="Logo" /></a>
 			</div>
 			<div class="hidden md:block link">
 				<div class=" flex items-baseline space-x-2 justify-end">
