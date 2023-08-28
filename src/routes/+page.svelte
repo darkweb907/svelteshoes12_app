@@ -76,7 +76,7 @@
 <nav>
 	<Navbar links={navLinks} />
 </nav>
-<div class="carousel-item bg-center flex flex-col items-center justify-center text-white px-5">
+<div class="carousel-item bg-center flex flex-col items-center bac justify-center text-white px-5">
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -106,7 +106,7 @@
 		width: 100%;
 		height: 100vh;
 		background-size: cover;
-		background-position: center center;
+		background-position-y: -130px;
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}
@@ -130,5 +130,10 @@
 
 	.animate-typewriter {
 		animation: typewriter 0.3s ease forwards;
+	}
+	@media (max-width: 800px) {
+		.carousel-item {
+			background-position-y: center;
+		}
 	}
 </style>
