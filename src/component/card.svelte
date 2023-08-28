@@ -70,7 +70,7 @@
 	</div>
 </div>
 
-<section class="container mx-auto text-center">
+<section class="container mx-auto text-center px-5">
 	<div
 		class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-x-4 md:space-y-0"
 	>

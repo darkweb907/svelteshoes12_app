@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
-	import welcome from '$lib/images/sax.avif';
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
+	import welcome from '$lib/images/bag.jpg';
+	import sand from '$lib/images/bet.jpg';
+	import logo from '$lib/images/shoe1.jpg';
 
 	const images = [{ src: welcome }, { src: sand }, { src: logo }];
 

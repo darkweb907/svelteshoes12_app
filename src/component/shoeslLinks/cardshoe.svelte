@@ -1,9 +1,9 @@
 <script>
 	// You can customize the content of each grid item
-	import welcome from '$lib/images/sax.avif';
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
-	import lag from '$lib/images/band1.avif';
+	import welcome from '$lib/images/shoe3.jpg';
+	import sand from '$lib/images/belt.jpg';
+	import logo from '$lib/images/bag2.jpg';
+	import lag from '$lib/images/bag.jpg';
 
 	const gridItems = [
 		{
@@ -101,5 +101,9 @@
 
 	.overlay button:hover {
 		background-color: #2779bd;
+	}
+	img {
+		aspect-ratio: 1/1;
+		object-fit: cover;
 	}
 </style>

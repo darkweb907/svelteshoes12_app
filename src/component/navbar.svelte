@@ -16,7 +16,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16 px-4">
 			<div transition:scale class="flex-shrink-0 mage">
-				<a href="/"><img class=" mt-5 w-1/3 md:w-1/3" src={logo} alt="Logo" /></a>
+				<a href="/"><img class=" my-5 w-1/3 md:w-1/3" src={logo} alt="Logo" /></a>
 			</div>
 			<div class="hidden md:block link">
 				<div class=" flex items-baseline space-x-2 justify-end">
@@ -74,7 +74,7 @@
 		</div>
 	</div>
 
-	<div class={isMenuOpen ? 'block' : 'hidden md:hidden'}>
+	<div class={isMenuOpen ? 'block' : 'hidden md:hidden'} id="hi">
 		<div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
 			{#each links as link (link)}
 				<a
@@ -94,5 +94,8 @@
 	}
 	.link {
 		flex: 3;
+	}
+	#hi {
+		background-color: black;
 	}
 </style>

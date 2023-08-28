@@ -1,6 +1,6 @@
 <script>
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
+	import sand from '$lib/images/shoe3.jpg';
+	import logo from '$lib/images/shoe4.jpg';
 </script>
 
 <section class="grid-section" id="bags">
@@ -69,5 +69,9 @@
 		max-width: 100%;
 		height: auto;
 		border-radius: 8px;
+	}
+	img {
+		aspect-ratio: 2/1;
+		object-fit: cover;
 	}
 </style>

@@ -1,10 +1,16 @@
 <!-- src/components/PlaylistSection.svelte -->
 <script>
 	import { goto } from '$app/navigation';
+	import welcome from '$lib/images/love.jpg';
+	import sand from '$lib/images/ese.jpg';
+	import logo from '$lib/images/ajo.jpg';
+	import give from '$lib/images/give.jpg';
 
 	const playlists = [
-		{ id: 1, name: 'Playlist 1', image: '/path/to/playlist1-image.jpg' },
-		{ id: 2, name: 'Playlist 2', image: '/path/to/playlist2-image.jpg' }
+		{ id: 1, name: 'Playlist 1', image: welcome },
+		{ id: 2, name: 'Playlist 2', image: sand },
+		{ id: 3, name: 'Playlist 2', image: logo },
+		{ id: 4, name: 'Playlist 2', image: give }
 		// Add more playlists as needed
 	];
 

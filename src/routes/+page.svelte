@@ -9,8 +9,8 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
-	import welcome from '$lib/images/furniture1.jpg';
-	import sand from '$lib/images/seg.jpg';
+	import welcome from '$lib/images/segun1.jpg';
+	import sand from '$lib/images/segun5.jpg';
 	import logo from '$lib/images/song.jpg';
 
 	let images = [

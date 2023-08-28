@@ -1,29 +1,36 @@
 <script>
+	import weldone from '$lib/images/shoe1.jpg';
+	import sand from '$lib/images/bet.jpg';
+	import chair from '$lib/images/gucci.jpg';
+	import fork from '$lib/images/red.jpg';
+	import bed from '$lib/images/bag.jpg';
+	import belt from '$lib/images/belt.jpg';
+
 	let activeTab = 'special';
 
 	// data for special div
 
 	let products = [
 		{
-			image: '/images/product1.jpg',
+			image: weldone,
 			name: 'Product 1',
 			rating: 4.5,
 			price: '$39.99'
 		},
 		{
-			image: '/images/product2.jpg',
+			image: sand,
 			name: 'Product 2',
 			rating: 3.8,
 			price: '$49.99'
 		},
 		{
-			image: '/images/product3.jpg',
+			image: chair,
 			name: 'Product 3',
 			rating: 4.2,
 			price: '$29.99'
 		},
 		{
-			image: '/images/product4.jpg',
+			image: fork,
 			name: 'Product 4',
 			rating: 4.7,
 			price: '$59.99'
@@ -33,13 +40,13 @@
 	///secnd aspect of images
 	let products1 = [
 		{
-			image: '/images/product1.jpg',
+			image: chair,
 			name: 'Product 1',
 			rating: 4.5,
 			price: '$39.99'
 		},
 		{
-			image: '/images/product2.jpg',
+			image: fork,
 			name: 'Product 2',
 			rating: 3.8,
 			price: '$49.99'
@@ -61,25 +68,25 @@
 
 	let products2 = [
 		{
-			image: '/images/product1.jpg',
+			image: chair,
 			name: 'Product 1',
 			rating: 4.5,
 			price: '$39.99'
 		},
 		{
-			image: '/images/product2.jpg',
+			image: fork,
 			name: 'Product 2',
 			rating: 3.8,
 			price: '$49.99'
 		},
 		{
-			image: '/images/product3.jpg',
+			image: bed,
 			name: 'Product 3',
 			rating: 4.2,
 			price: '$29.99'
 		},
 		{
-			image: '/images/product4.jpg',
+			image: belt,
 			name: 'Product 4',
 			rating: 4.7,
 			price: '$59.99'
@@ -207,10 +214,11 @@
 		max-width: 100%;
 		height: auto;
 		border-radius: 8px;
+		aspect-ratio: 2/1;
+		object-fit: cover;
 	}
 
 	.info {
-		text-align: center;
 		margin-top: 1rem;
 	}
 </style>

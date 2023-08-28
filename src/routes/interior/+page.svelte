@@ -14,7 +14,7 @@
 	<Navbar links={navLinks} />
 </nav>
 <main>
-	<div class="interior px-5 md:px-0">
+	<div class="interior md:px-0">
 		<Card />
 	</div>
 </main>
