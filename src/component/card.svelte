@@ -294,7 +294,7 @@
 	}
 	@media (max-width: 800px) {
 		.carousel {
-			height: 60vh;
+			height: 80vh;
 		}
 	}
 </style>
