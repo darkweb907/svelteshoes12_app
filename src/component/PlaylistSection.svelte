@@ -9,8 +9,8 @@
 	const playlists = [
 		{ id: 1, name: 'Playlist 1', image: welcome },
 		{ id: 2, name: 'Playlist 2', image: sand },
-		{ id: 3, name: 'Playlist 2', image: logo },
-		{ id: 4, name: 'Playlist 2', image: give }
+		{ id: 3, name: 'Playlist 3', image: logo },
+		{ id: 4, name: 'Playlist 4', image: give }
 		// Add more playlists as needed
 	];
 

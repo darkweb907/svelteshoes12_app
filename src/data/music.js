@@ -51,7 +51,7 @@ export const songs = [
 
   {
     id: 7,
-    playlistId: 2,
+    playlistId: 1,
     title: 'Song 7',
     artist: 'Artist 7',
     audioUrl: '/path/to/song7.mp3',
@@ -97,17 +97,120 @@ export const songs = [
     audioUrl: '/path/to/song12.mp3',
     downloadLink: '/path/to/song12.mp3',
   },
+   // Repeat the same structure for other playlists...
+
+   {
+    id: 13,
+    playlistId: 2,
+    title: 'Song 7',
+    artist: 'Artist 7',
+    audioUrl: '/path/to/song7.mp3',
+    downloadLink: '/path/to/song7.mp3',
+  },
+  {
+    id: 14,
+    playlistId: 3,
+    title: 'Song 8',
+    artist: 'Artist 8',
+    audioUrl: '/path/to/song8.mp3',
+    downloadLink: '/path/to/song8.mp3',
+  },
+  {
+    id: 15,
+    playlistId: 3,
+    title: 'Song 9',
+    artist: 'Artist 9',
+    audioUrl: '/path/to/song9.mp3',
+    downloadLink: '/path/to/song9.mp3',
+  },
+  {
+    id: 16,
+    playlistId: 3,
+    title: 'Song 10',
+    artist: 'Artist 10',
+    audioUrl: '/path/to/song10.mp3',
+    downloadLink: '/path/to/song10.mp3',
+  },
+  {
+    id: 17,
+    playlistId: 3,
+    title: 'Song 11',
+    artist: 'Artist 11',
+    audioUrl: '/path/to/song11.mp3',
+    downloadLink: '/path/to/song11.mp3',
+  },
+  {
+    id: 18,
+    playlistId: 3,
+    title: 'Song 12',
+    artist: 'Artist 12',
+    audioUrl: '/path/to/song12.mp3',
+    downloadLink: '/path/to/song12.mp3',
+  },
+   // Repeat the same structure for other playlists...
+
+   {
+    id: 19,
+    playlistId: 3,
+    title: 'Song 7',
+    artist: 'Artist 7',
+    audioUrl: '/path/to/song7.mp3',
+    downloadLink: '/path/to/song7.mp3',
+  },
+  {
+    id: 20,
+    playlistId: 4,
+    title: 'Song 8',
+    artist: 'Artist 8',
+    audioUrl: '/path/to/song8.mp3',
+    downloadLink: '/path/to/song8.mp3',
+  },
+  {
+    id: 21,
+    playlistId: 4,
+    title: 'Song 9',
+    artist: 'Artist 9',
+    audioUrl: '/path/to/song9.mp3',
+    downloadLink: '/path/to/song9.mp3',
+  },
+  {
+    id: 22,
+    playlistId: 4,
+    title: 'Song 10',
+    artist: 'Artist 10',
+    audioUrl: '/path/to/song10.mp3',
+    downloadLink: '/path/to/song10.mp3',
+  },
+  {
+    id: 23,
+    playlistId: 4,
+    title: 'Song 11',
+    artist: 'Artist 11',
+    audioUrl: '/path/to/song11.mp3',
+    downloadLink: '/path/to/song11.mp3',
+  },
+  
 ];
 
 export const playlists = [
   {
     id: 1,
     name: 'Playlist 1',
-    songs: [1, 2, 3, 4, 5, 6], // Song IDs belonging to this playlist
+    songs: [1, 2, 3, 4, 5, 6,7], // Song IDs belonging to this playlist
   },
   {
     id: 2,
     name: 'Playlist 2',
-    songs: [7, 8, 9, 10, 11, 12], // Song IDs belonging to this playlist
+    songs: [8, 9, 10, 11, 12,13], // Song IDs belonging to this playlist
+  },
+  {
+    id: 3,
+    name: 'Playlist 3',
+    songs: [14, 15, 16, 17, 18,19], // Song IDs belonging to this playlist
+  },
+  {
+    id: 4,
+    name: 'Playlist 4',
+    songs: [20,21,22,23], // Song IDs belonging to this playlist
   },
 ];
