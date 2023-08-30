@@ -49,8 +49,8 @@
 			{#each playlistSongs as song}
 				<li class="bg-white shadow-md rounded-lg p-4 flex space-x-4 items-center">
 					<div class="flex-grow">
-						<p class="text-lg font-semibold">{song.title}</p>
-						<p class="text-gray-500">{song.artist}</p>
+						<p class="font-bold text-sm">{song.title}</p>
+						<p class="text-gray-500">Segun Odomosu</p>
 					</div>
 					<div class="space-x-2">
 						{#if currentSong === song}
@@ -60,7 +60,7 @@
 						{/if}
 						<a
 							href={song.downloadLink}
-							download={song.downloadLink}
+							download
 							class="bg-green-500 text-white py-2 px-4 rounded transition duration-300 hover:bg-green-600"
 						>
 							Download
