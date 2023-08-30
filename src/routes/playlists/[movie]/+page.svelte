@@ -50,7 +50,7 @@
 				<li class="bg-white shadow-md rounded-lg p-4 flex space-x-4 items-center">
 					<div class="flex-grow">
 						<p class="font-bold text-sm">{song.title}</p>
-						<p class="text-gray-500">Segun Odomosu</p>
+						<p class="text-gray-500">Segun Odumosu</p>
 					</div>
 					<div class="space-x-2">
 						{#if currentSong === song}
