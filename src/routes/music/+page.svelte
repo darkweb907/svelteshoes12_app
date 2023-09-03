@@ -9,9 +9,9 @@
 	// Replace with the actual year of your album
 
 	const navLinks = [
-		{ text: 'Segun Odumsu Band', url: '#main' },
-		{ text: 'Jazzon Interior', url: './about' },
-		{ text: 'Leather Work', url: '#' }
+		{ text: 'Segun Odumosu Band', url: '#main' },
+		{ text: 'Jazzon Interior', url: './interior' },
+		{ text: 'Leather Work', url: '/shoes' }
 	];
 </script>
 

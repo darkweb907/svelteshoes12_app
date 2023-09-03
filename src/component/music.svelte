@@ -2,9 +2,9 @@
 	import { onMount } from 'svelte';
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
-	import welcome from '$lib/images/sax.avif';
-	import sand from '$lib/images/sax1.avif';
-	import logo from '$lib/images/sax2.avif';
+	import welcome from '$lib/images/flute.jpg';
+	import sand from '$lib/images/flute.jpg';
+	import logo from '$lib/images/flute2.jpg';
 
 	let images = [
 		welcome,
@@ -43,30 +43,32 @@
 	onMount(() => {
 		const tl = gsap.timeline({ repeat: -1 });
 
-		tl.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: showText });
+		tl.to('.carousel-team', { duration: 2, autoAlpha: 1, onComplete: showText });
 		typewriterAnimation();
 
 		function updateImage() {
 			currentIndex = (currentIndex + 1) % images.length;
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
+			gsap.to('.carousel-team', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
 		}
 
 		function fadeInImage() {
-			gsap.set('.carousel-item', {
+			gsap.set('.carousel-team', {
 				backgroundImage: () => `url('${images[currentIndex]}')`
 			});
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
+			gsap.to('.carousel-team', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
 		}
 
-		gsap.set('.carousel-item', {
+		gsap.set('.carousel-team', {
 			backgroundImage: () => `url('${images[currentIndex]}')`
 		});
 
-		gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
+		gsap.to('.carousel-team', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
 	});
 </script>
 
-<div class="carousel-item bg-center flex flex-col items-center justify-center text-white px-5">
+<div
+	class="carousel-team bg-center flex flex-col items-center justify-center text-white px-5 md:h-4/6"
+>
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -78,29 +80,38 @@
 	<p class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center">
 		Experience the soulful rhythm and energy of our music.
 	</p>
-	<div class="  {isTextVisible ? 'fade-in' : ''} flex flex-col md:flex-row gap-3">
-		<a href="#" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded"
-			>Learn More about us</a
-		>
-		<a href="#" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
-			>Listen to my Music</a
-		>
-	</div>
+</div>
+<div class="flex flex-col md:flex-row gap-3 sep">
+	<a
+		href="#brand"
+		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded cursor-pointer whitespace-nowrap"
+		>Learn More about us</a
+	>
+	<a href="/playlist" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
+		>Listen to my Music</a
+	>
 </div>
 
 <style>
-	.carousel-item {
+	.sep {
+		position: absolute;
+		bottom: 19%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	.carousel-team {
 		position: relative;
 		top: -6px;
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		background-size: cover;
+		background-size: contain;
+		background-repeat: no-repeat;
 		background-position: center;
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}
-	.carousel-item::before {
+	.carousel-team::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -122,7 +133,10 @@
 		animation: typewriter 0.3s ease forwards;
 	}
 	@media (max-width: 800px) {
-		.carousel-item {
+		.sep {
+			bottom: 22%;
+		}
+		.carousel-team {
 			height: 80vh;
 		}
 	}

@@ -13,6 +13,13 @@
 	import Test from './test.svelte';
 	import Footer from './footer.svelte';
 
+	let images = [
+		bed,
+		sand,
+		pop
+		// Add more image URLs as needed
+	];
+
 	// text animation
 
 	let isTextVisible = false;
@@ -43,12 +50,30 @@
 	onMount(() => {
 		const tl = gsap.timeline({ repeat: -1 });
 
-		tl.to('.carousel', { duration: 2, autoAlpha: 1, onComplete: showText });
+		tl.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: showText });
 		typewriterAnimation();
+
+		function updateImage() {
+			currentIndex = (currentIndex + 1) % images.length;
+			gsap.to('.carousel-item', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
+		}
+
+		function fadeInImage() {
+			gsap.set('.carousel-item', {
+				backgroundImage: () => `url('${images[currentIndex]}')`
+			});
+			gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 4 });
+		}
+
+		gsap.set('.carousel-item', {
+			backgroundImage: () => `url('${images[currentIndex]}')`
+		});
+
+		gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
 	});
 </script>
 
-<div class=" carousel bg-center flex flex-col items-center justify-center text-white px-5">
+<div class="carousel-item bg-center flex flex-col items-center bac justify-center text-white px-5">
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -60,16 +85,17 @@
 	<p class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center">
 		Experience the soulful rhythm and energy of our music.
 	</p>
-	<div class="  {isTextVisible ? 'fade-in' : ''} flex flex-col md:flex-row gap-3">
-		<a href="#flush" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded"
-			>Learn More about us</a
-		>
-		<a href="/music" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
-			>Listen to my Music</a
-		>
-	</div>
 </div>
-
+<div class="flex flex-col md:flex-row gap-3 both">
+	<a
+		href="#flush"
+		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded cursor-pointer whitespace-nowrap"
+		>Learn More about us</a
+	>
+	<a href="/music" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
+		>Listen to my Music</a
+	>
+</div>
 <section class="container mx-auto text-center px-5">
 	<div
 		class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-x-4 md:space-y-0"
@@ -106,17 +132,23 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
 			<!-- Left column: heading and text -->
 			<div>
-				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
-				<p class="text-gray-600 text-xl text-justify">
-					Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-					there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-					the Semantics, a large language ocean.
+				<h2 class="text-4xl text-center md:text-left font-bold mb-4">About Us</h2>
+				<p class="text-gray-600 text-xl text-justify w-auto md:w-4/5">
+					jazzon Interior Services is a registered interior design company based in Nigeria. With a
+					reputation for excellence and a commitment to providing exceptional interior design
+					solutions, Jazzon Interior Services serves clients across the country.
+				</p>
+				<p class="text-gray-600 text-xl text-justify w-auto md:w-4/5">
+					Led by a team of skilled and experienced professionals, Jazzon Interior Services offers a
+					wide range of services to cater to various design needs. Whether it's residential,
+					commercial, or hospitality spaces, the company specializes in creating functional and
+					aesthetic interior designs that align with clients' preferences and requirements.
 				</p>
 			</div>
 
 			<!-- Right column: image -->
 			<div class="md:order-last">
-				<img src={sand} alt="Interior Design" class="w-full shadow-md" />
+				<img alt="design" src={sand} class="w-full shadow-md" />
 			</div>
 		</div>
 	</div>
@@ -146,7 +178,7 @@
 <!-- project -->
 
 <section class="py-16" id="draught">
-	<div class="max-w-4xl mx-auto px-4 container mx-auto">
+	<div class="max-w-4xl mx-auto px-4 container">
 		<div class="text-center">
 			<h2 class="text-3xl font-semibold mb-4">Our Projects</h2>
 			<p class="text-gray-600 leading-relaxed">
@@ -256,10 +288,20 @@
 </footer>
 
 <style>
+	.both {
+		position: absolute;
+		bottom: 36%;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+	p {
+		font-size: 16px;
+	}
 	section {
 		font-family: 'Open Sans', sans-serif;
 	}
-	.carousel {
+
+	.carousel-item {
 		background-image: url($lib/images/interiors.jpg);
 		position: relative;
 		top: -92px;
@@ -271,7 +313,7 @@
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}
-	.carousel::before {
+	.carousel-item::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -293,7 +335,7 @@
 		animation: typewriter 0.3s ease forwards;
 	}
 	@media (max-width: 800px) {
-		.carousel {
+		.carousel-item {
 			height: 80vh;
 		}
 	}

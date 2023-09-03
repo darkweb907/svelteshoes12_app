@@ -47,7 +47,7 @@
 		<h1 class="text-3xl font-semibold mb-6">Playlist Details</h1>
 		<ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 			{#each playlistSongs as song}
-				<li class="bg-white shadow-md rounded-lg p-4 flex space-x-4 items-center">
+				<li class="bg-white shadow-md rounded-lg p-4 flex items-center">
 					<div class="flex-grow">
 						<p class="font-bold text-sm">{song.title}</p>
 						<p class="text-gray-500">Segun Odumosu</p>
@@ -73,5 +73,16 @@
 </main>
 
 <style>
+	@media (max-width: 360px) {
+		ul {
+			background-color: red;
+		}
+		li {
+			font-size: 19px;
+			align-items: flex-start;
+			flex-direction: column;
+			gap: 23px;
+		}
+	}
 	/* Additional styling or overrides */
 </style>

@@ -10,11 +10,6 @@
 	];
 </script>
 
-<nav class="container mx-auto">
-	<Navbar links={navLinks} />
-</nav>
-<main>
-	<div class="interior md:px-0">
-		<Card />
-	</div>
-</main>
+<Navbar links={navLinks} />
+
+<Card />

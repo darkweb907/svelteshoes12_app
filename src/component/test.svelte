@@ -1,6 +1,6 @@
 <!-- src/components/TestimonySection.svelte -->
 <script>
-	import weldone from '$lib/images/sax.avif';
+	import weldone from '$lib/images/flute.jpg';
 	// Import any necessary modules
 
 	const testimonies = [
