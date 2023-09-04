@@ -28,7 +28,7 @@
 		<div class="footer-div">
 			<h3 class="text-xl font-semibold mb-2 text-white">Contact Us</h3>
 			<p class="text-white leading-6">
-				<strong>Address:<br /></strong> 123 Main St, City, Country<br />
+				<strong>Address:<br /></strong> Jazzon villa Olubodun street, gasline Ifo<br />
 				<strong>Phone:<br /></strong> +123-456-7890<br />
 				<strong>Email:<br /></strong> info@example.com
 			</p>

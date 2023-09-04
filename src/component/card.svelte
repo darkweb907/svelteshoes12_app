@@ -50,30 +50,30 @@
 	onMount(() => {
 		const tl = gsap.timeline({ repeat: -1 });
 
-		tl.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: showText });
+		tl.to('.carousel-s', { duration: 2, autoAlpha: 1, onComplete: showText });
 		typewriterAnimation();
 
 		function updateImage() {
 			currentIndex = (currentIndex + 1) % images.length;
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
+			gsap.to('.carousel-s', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
 		}
 
 		function fadeInImage() {
-			gsap.set('.carousel-item', {
+			gsap.set('.carousel-s', {
 				backgroundImage: () => `url('${images[currentIndex]}')`
 			});
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 4 });
+			gsap.to('.carousel-s', { duration: 1, autoAlpha: 1, onComplete: updateImage, delay: 1 });
 		}
 
-		gsap.set('.carousel-item', {
+		gsap.set('.carousel-s', {
 			backgroundImage: () => `url('${images[currentIndex]}')`
 		});
 
-		gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
+		gsap.to('.carousel-s', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
 	});
 </script>
 
-<div class="carousel-item bg-center flex flex-col items-center bac justify-center text-white px-5">
+<div class="carousel-s bg-center flex flex-col items-center bac justify-center text-white px-5">
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -161,9 +161,9 @@
 			<div>
 				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
 				<p class="text-gray-600 text-xl text-justify">
-					Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-					there live the blind texts. Separated they live in Bookmarksgrove right at the coast of
-					the Semantics, a large language ocean.
+					Painting,draughtsmanship,3D Epoxy wall/ceiling/floor,POP wall/ceiling janitopr
+					floor,Furniture/Cabinetmakng,Flush door and general merchandize Our Project are carried
+					out by groups of competent artisans to give our clients the best they desire
 				</p>
 			</div>
 
@@ -302,7 +302,7 @@
 		font-family: 'Open Sans', sans-serif;
 	}
 
-	.carousel-item {
+	.carousel-s {
 		background-image: url($lib/images/interiors.jpg);
 		position: relative;
 		top: -92px;
@@ -314,7 +314,7 @@
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}
-	.carousel-item::before {
+	.carousel-s::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -336,7 +336,7 @@
 		animation: typewriter 0.3s ease forwards;
 	}
 	@media (max-width: 800px) {
-		.carousel-item {
+		.carousel-s {
 			height: 80vh;
 		}
 	}

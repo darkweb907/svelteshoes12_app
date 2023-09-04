@@ -50,33 +50,33 @@
 	onMount(() => {
 		const tl = gsap.timeline({ repeat: -1 });
 
-		tl.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: showText });
+		tl.to('.carousel-y', { duration: 2, autoAlpha: 1, onComplete: showText });
 		typewriterAnimation();
 
 		function updateImage() {
 			currentIndex = (currentIndex + 1) % images.length;
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
+			gsap.to('.carousel-y', { duration: 1, autoAlpha: 0, delay: 4 });
 		}
 
-		function fadeInImage() {
-			gsap.set('.carousel-item', {
-				backgroundImage: () => `url('${images[currentIndex]}')`
-			});
-			gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 4 });
-		}
+		// function fadeInImage() {
+		// 	gsap.set('.carousel-y', {
+		// 		backgroundImage: () => `url('${images[currentIndex]}')`
+		// 	});
+		// 	gsap.to('.carousel-y', { duration: 1, autoAlpha: 1, onComplete: updateImage, delay: 1 });
+		// }
 
-		gsap.set('.carousel-item', {
+		gsap.set('.carousel-y', {
 			backgroundImage: () => `url('${images[currentIndex]}')`
 		});
 
-		gsap.to('.carousel-item', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
+		gsap.to('.carousel-y', { duration: 2, autoAlpha: 1, onComplete: updateImage, delay: 2 });
 	});
 </script>
 
 <nav>
 	<Navbar links={navLinks} />
 </nav>
-<div class="carousel-item bg-center flex flex-col items-center bac justify-center text-white px-5">
+<div class="carousel-y bg-center flex flex-col items-center bac justify-center text-white px-5">
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -99,7 +99,7 @@
 </div>
 
 <style>
-	.carousel-item {
+	.carousel-y {
 		position: fixed;
 		top: 0;
 		left: 0;
@@ -110,7 +110,7 @@
 		z-index: -1;
 		/* Add an overlay to the background image */
 	}
-	.carousel-item::before {
+	.carousel-y::before {
 		content: '';
 		position: absolute;
 		top: 0;
@@ -132,7 +132,7 @@
 		animation: typewriter 0.3s ease forwards;
 	}
 	@media (max-width: 800px) {
-		.carousel-item {
+		.carousel-y {
 			background-position-y: center;
 		}
 	}
