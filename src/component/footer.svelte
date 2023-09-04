@@ -8,13 +8,16 @@
 				malesuada.
 			</p>
 			<div class="flex space-x-4">
-				<a href="#" class="text-white">
+				<a href="https://www.facebook.com/profile.php?id=100074675780177" class="text-white">
 					<i class="fab fa-facebook fa-lg" />
 				</a>
-				<a href="#" class="text-white">
+				<a href="https://www.facebook.com/profile.php?id=100074675780177" class="text-white">
 					<i class="fab fa-twitter fa-lg" />
 				</a>
-				<a href="#" class="text-white">
+				<a
+					href="https://www.instagram.com/invites/contact/?i=1g3cmxgu0lp1j&utm_content=hrhdrx0"
+					class="text-white"
+				>
 					<i class="fab fa-instagram fa-lg" />
 				</a>
 			</div>
