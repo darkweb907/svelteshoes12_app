@@ -3,7 +3,7 @@
 	import { gsap } from 'gsap';
 	// import Welcome from '$lib/images/s.png';
 	import welcome from '$lib/images/flute.jpg';
-	import sand from '$lib/images/flute.jpg';
+	import sand from '$lib/images/flute1.jpg';
 	import logo from '$lib/images/flute2.jpg';
 
 	let images = [
