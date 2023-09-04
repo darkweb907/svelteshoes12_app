@@ -11,7 +11,10 @@
 				<a href="https://www.facebook.com/profile.php?id=100074675780177" class="text-white">
 					<i class="fab fa-facebook fa-lg" />
 				</a>
-				<a href="https://www.facebook.com/profile.php?id=100074675780177" class="text-white">
+				<a
+					href="https://twitter.com/odumosusegun3?t=KB89K68c5dx79EouhdgA6w&s=09"
+					class="text-white"
+				>
 					<i class="fab fa-twitter fa-lg" />
 				</a>
 				<a
