@@ -1,8 +1,7 @@
 <script>
-	import sand from '$lib/images/sax.avif';
 	import chair from '$lib/images/seg.jpg';
 	import fork from '$lib/images/segun1.jpg';
-	import bed from '$lib/images/segun5.jpg';
+	import sand from '$lib/images/segun5.jpg';
 </script>
 
 <section class="p-8 bg-gray-100 text-center grid gap-4 grid-cols-1 md:grid-cols-3">
