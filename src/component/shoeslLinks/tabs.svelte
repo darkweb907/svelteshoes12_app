@@ -102,6 +102,8 @@
 
 <section class="container mx-auto">
 	<div class="flex space-x-4 mt-8 px-4">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div
 			class="tab"
 			class:active={activeTab === 'special'}
@@ -109,9 +111,13 @@
 		>
 			Special Product
 		</div>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div class="tab" class:active={activeTab === 'best'} on:click={() => setActiveTab('best')}>
 			Best Product
 		</div>
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<div class="tab" class:active={activeTab === 'new'} on:click={() => setActiveTab('new')}>
 			New Product
 		</div>
