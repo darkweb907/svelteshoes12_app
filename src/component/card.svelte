@@ -160,10 +160,9 @@
 			<!-- Left column: heading and text -->
 			<div>
 				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
-				<p class="text-gray-600 text-xl text-justify">
-					Painting,draughtsmanship,3D Epoxy wall/ceiling/floor,POP wall/ceiling janitopr
-					floor,Furniture/Cabinetmakng,Flush door and general merchandize Our Project are carried
-					out by groups of competent artisans to give our clients the best they desire
+				<p class="text-gray-600 text-xl text-center md:text-left">
+					Painting,draughtsmanship,3D Epoxy wall/ceiling/floor,POP wall/ceiling
+					floor,Furniture/Cabinetmakng,Flush door and general merchandize
 				</p>
 			</div>
 
@@ -182,8 +181,8 @@
 		<div class="text-center">
 			<h2 class="text-3xl font-semibold mb-4">Our Projects</h2>
 			<p class="text-gray-600 leading-relaxed">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit,
-				necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.
+				Our Project are carried out by groups of competent artisans to give our clients the
+				best they desire
 			</p>
 		</div>
 
