@@ -36,10 +36,10 @@
 		<div class="footer-div">
 			<h3 class="text-xl font-semibold mb-2 text-white">Quick Links</h3>
 			<ul class="text-white">
-				<li class="mb-1"><a href="#">Home</a></li>
+				<li class="mb-1"><a href="/">Home</a></li>
 				<li class="mb-1"><a href="#">About</a></li>
-				<li class="mb-1"><a href="#">Portfolio</a></li>
-				<li class="mb-1"><a href="#">Contact</a></li>
+				<li class="mb-1"><a href="/music ">Music</a></li>
+				<li class="mb-1"><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
 	</div>
