@@ -89,8 +89,8 @@
 		Experience the soulful rhythm and energy of our music.
 	</p>
 	<div class="  {isTextVisible ? 'fade-in' : ''} flex flex-col md:flex-row gap-3">
-		<button class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded"
-			>Learn More about us</button
+		<a href="/about" class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded"
+			>Learn More about us</a
 		>
 		<a href="/music" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
 			>Listen to my Music</a

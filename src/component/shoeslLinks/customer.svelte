@@ -1,7 +1,7 @@
 <script>
-	import chair from '$lib/images/seg.jpg';
-	import fork from '$lib/images/segun1.jpg';
-	import sand from '$lib/images/segun5.jpg';
+	import chair from '$lib/images/black6.jpg';
+	import fork from '$lib/images/black1.jpg';
+	import sand from '$lib/images/black2.webp';
 </script>
 
 <section class="p-8 bg-gray-100 text-center grid gap-4 grid-cols-1 md:grid-cols-3">

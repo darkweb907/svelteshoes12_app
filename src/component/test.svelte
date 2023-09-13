@@ -1,33 +1,32 @@
 <!-- src/components/TestimonySection.svelte -->
 <script>
-	import weldone from '$lib/images/flute.jpg';
+	import weldone from '$lib/images/black2.jpg';
+	import jame from '$lib/images/black7.webp';
+	import adams from '$lib/images/black5.jpg';
 	// Import any necessary modules
 
 	const testimonies = [
 		// Add your testimony objects here
 		{
 			id: 1,
-			imageUrl: weldone,
-			name: 'John Doe',
-			position: 'CEO, Company A',
+			imageUrl: adams,
+			name: 'Adams williams',
 			quote:
-				'” Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. “'
+				'” Our home is now a reflection of our dreams. The interior design work done here is simply magical. Thank you for creating such a beautiful and functional space. “'
 		},
 		{
 			id: 1,
 			imageUrl: weldone,
-			name: 'John Doe',
-			position: 'CEO, Company A',
+			name: 'Miss audu',
 			quote:
-				'” Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. “'
+				'” "I\'m in awe of the transformation. Every corner of our house feels like a page from a design magazine. The attention to detail is remarkable. “'
 		},
 		{
 			id: 1,
-			imageUrl: weldone,
-			name: 'John Doe',
-			position: 'CEO, Company A',
+			imageUrl: jame,
+			name: 'Mrs james',
 			quote:
-				'” Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquid. Atque dolore esse veritatis iusto eaque perferendis non dolorem fugiat voluptatibus vitae error ad itaque inventore accusantium tempore dolores sunt. “'
+				'” "Absolutely thrilled with the outcome. Our designer\'s ability to blend elegance with functionality is commendable. The result is a space we truly adore. “'
 		}
 	];
 </script>
@@ -52,7 +51,6 @@
 						/>
 						<div>
 							<p class="text-gray-800 font-semibold">{testimony.name}</p>
-							<p class="text-gray-600">{testimony.position}</p>
 						</div>
 					</div>
 					<p class="mt-4 text-gray-600">{testimony.quote}</p>
