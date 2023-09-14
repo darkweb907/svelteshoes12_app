@@ -18,9 +18,9 @@
 <nav class="bg-black py-2">
 	<Navbar links={navLinks} />
 </nav>
-<div class="music">
+<!-- <div class="music">
 	<Music />
-</div>
+</div> -->
 <main>
 	<Head />
 	<Song />

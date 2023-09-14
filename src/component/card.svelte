@@ -30,7 +30,7 @@
 	}
 
 	function typewriterAnimation() {
-		let characters = "Segun Odumosu And The Afrocano's Band";
+		let characters = 'Immerse yourself in the rich tapestry of interior design';
 		let index = 0;
 
 		function type() {
@@ -83,18 +83,19 @@
 		{/if}
 	</h1>
 	<p class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center">
-		Experience the soulful rhythm and energy of our music.
+		Where creativity meets functionality, and spaces come to life
 	</p>
 </div>
 <div class="flex flex-col md:flex-row gap-3 both">
 	<a
 		href="#flush"
-		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded cursor-pointer whitespace-nowrap"
+		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full cursor-pointer whitespace-nowrap"
 		>Learn More about us</a
 	>
-	<a href="/music" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded"
-		>Listen to my Music</a
-	>
+	<a href="#draught" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-full group"
+		>Check our design
+		<i class=" ml-3 fas fa-couch fa-sm group-hover:text-red-500" />
+	</a>
 </div>
 <section class="container mx-auto text-center px-5">
 	<div
@@ -110,7 +111,7 @@
 		<!-- Second div -->
 		<div class="bg-gray-200 p-4 rounded-lg shadow-md flex flex-col items-center justify-center">
 			<i class="fas fa-heart text-2xl mb-2" />
-			<h3 class="text-lg font-semibold mb-1">Decor</h3>
+			<h3 class="text-lg font-semibold mb-1">Decorat</h3>
 			<p class="text-gray-600">Discover exquisite decor pieces that transform your space.</p>
 		</div>
 
@@ -162,7 +163,7 @@
 				<h2 class="text-3xl text-center md:text-left font-semibold mb-4">Our Services</h2>
 				<p class="text-gray-600 text-xl text-center md:text-left">
 					Painting,draughtsmanship,3D Epoxy wall/ceiling/floor,POP wall/ceiling
-					floor,Furniture/Cabinetmakng,Flush door and general merchandize
+					,Furniture/Cabinetmakng,Flush door and general merchandize
 				</p>
 			</div>
 

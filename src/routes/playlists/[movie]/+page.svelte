@@ -74,9 +74,6 @@
 
 <style>
 	@media (max-width: 360px) {
-		ul {
-			background-color: red;
-		}
 		li {
 			font-size: 19px;
 			align-items: flex-start;
