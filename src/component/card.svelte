@@ -92,19 +92,7 @@
 		Where creativity meets functionality, and spaces come to life
 	</p>
 </div>
-<div class="flex flex-col md:flex-row gap-3 both">
-	<a
-		href="#flush"
-		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full cursor-pointer whitespace-nowrap"
-		>Learn More about us</a
-	>
-	<a
-		href="#draught"
-		class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-full group whitespace-nowrap"
-		>Check our design
-		<i class=" ml-3 fas fa-couch fa-sm group-hover:text-red-500" />
-	</a>
-</div>
+
 <section class="container mx-auto text-center px-5">
 	<div
 		class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-x-4 md:space-y-0"
