@@ -74,7 +74,11 @@
 </script>
 
 <div class="carousel-s bg-center flex flex-col items-center bac justify-center text-white px-5">
-	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
+	<h1
+		class="md:text-4xl text-sm text-center font-semibold mb-4 {isTextVisible
+			? 'fade-in'
+			: ''} font-[montserrat]"
+	>
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
 				<span class="opacity-0 animate-typewriter" style="animation-delay: {i * 0.1}s;">{char}</span
@@ -82,7 +86,9 @@
 			{/each}
 		{/if}
 	</h1>
-	<p class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center">
+	<p
+		class="md:text-lg mb-8 {isTextVisible ? 'fade-in' : ''} text-base text-center font-[montserrat]"
+	>
 		Where creativity meets functionality, and spaces come to life
 	</p>
 </div>
@@ -92,7 +98,9 @@
 		class="px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-full cursor-pointer whitespace-nowrap"
 		>Learn More about us</a
 	>
-	<a href="#draught" class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-full group"
+	<a
+		href="#draught"
+		class="px-6 py-3 bg-gray-800 hover:bg-gray-900 text-white rounded-full group whitespace-nowrap"
 		>Check our design
 		<i class=" ml-3 fas fa-couch fa-sm group-hover:text-red-500" />
 	</a>
