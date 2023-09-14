@@ -33,10 +33,11 @@
 
 <section class="bg-gray-100 py-24">
 	<div class="max-w-7xl mx-auto px-4 text-center">
-		<h2 class="text-3xl font-semibold mb-4 my-4">testimonies</h2>
+		<h2 class="text-3xl font-semibold mb-4 my-4">Testimonies</h2>
 		<p class="text-gray-600 leading-relaxed px-6 max-w-4xl mx-auto my-10">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit,
-			necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.
+			Testimonials play a vital role in building trust and credibility for businesses and
+			individuals. These brief statements or reviews are shared by satisfied customers, clients, or
+			users, and they serve as authentic endorsements of a product, service, or experience.
 		</p>
 		<!-- Display the current 3 testimonies -->
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-4">

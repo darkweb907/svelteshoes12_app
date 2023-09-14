@@ -58,12 +58,12 @@
 			gsap.to('.carousel-s', { duration: 2, autoAlpha: 0, onComplete: fadeInImage });
 		}
 
-		function fadeInImage() {
-			gsap.set('.carousel-s', {
-				backgroundImage: () => `url('${images[currentIndex]}')`
-			});
-			gsap.to('.carousel-s', { duration: 1, autoAlpha: 1, onComplete: updateImage, delay: 1 });
-		}
+		// function fadeInImage() {
+		// 	gsap.set('.carousel-s', {
+		// 		backgroundImage: () => `url('${images[currentIndex]}')`
+		// 	});
+		// 	gsap.to('.carousel-s', { duration: 1, autoAlpha: 1, onComplete: updateImage, delay: 1 });
+		// }
 
 		gsap.set('.carousel-s', {
 			backgroundImage: () => `url('${images[currentIndex]}')`
