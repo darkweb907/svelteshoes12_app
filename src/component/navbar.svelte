@@ -4,6 +4,7 @@
 	import logo from '$lib/images/logo1.png';
 
 	export let links = [];
+	export let bag;
 
 	let isMenuOpen = false;
 

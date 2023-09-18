@@ -3,7 +3,7 @@
 	import Navbar from '../../component/navbar.svelte';
 
 	const navLinks = [
-		{ text: 'Furniture', url: '#draught' },
+		{ text: 'Furniture', url: '/furniture' },
 		{ text: 'Pop Wall', url: '#draught' },
 		{ text: 'painting', url: '#paint' },
 		{ text: 'Flush Door', url: '#flush' }
