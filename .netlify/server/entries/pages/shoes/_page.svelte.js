@@ -1,8 +1,6 @@
 import { c as create_ssr_component, d as add_attribute, f as each, e as escape, v as validate_component } from "../../../chunks/ssr.js";
 import { N as Navbar } from "../../../chunks/navbar.js";
 import { F as Footer } from "../../../chunks/footer.js";
-const fork$1 = "/_app/immutable/assets/segun1.8651ecba.jpg";
-const sand$1 = "/_app/immutable/assets/segun5.012478d1.jpg";
 const welcome = "/_app/immutable/assets/shoe3.14eeac21.jpg";
 const logo$1 = "/_app/immutable/assets/shoe4.47eb3862.jpg";
 const bags_svelte_svelte_type_style_lang = "";
@@ -50,7 +48,9 @@ const Cardshoe = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     return `<div class="grid-item max-w-md mx-auto svelte-1qi9o9"><h3 class="font-medium leading-relaxed text-xl pl-3">${escape(item.title)}</h3> <p class="my-2 leading-relaxed text-xl font-light pl-3">${escape(item.content)}</p> <img${add_attribute("src", item.imageUrl, 0)}${add_attribute("alt", item.title, 0)} class="svelte-1qi9o9"> <div class="overlay svelte-1qi9o9" data-svelte-h="svelte-1kkozqv"><button class="svelte-1qi9o9">Shop Now</button></div> </div>`;
   })} </section>`;
 });
-const chair$1 = "/_app/immutable/assets/seg.6638d3aa.jpg";
+const chair$1 = "/_app/immutable/assets/black6.49da0eb2.jpg";
+const fork$1 = "/_app/immutable/assets/black1.ce38489c.jpg";
+const sand$1 = "/_app/immutable/assets/black2.9b4dc263.webp";
 const Customer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<section class="p-8 bg-gray-100 text-center grid gap-4 grid-cols-1 md:grid-cols-3" data-svelte-h="svelte-13oz0o1"><div class="bg-white rounded-lg shadow-md p-6 transform transition-transform hover:-translate-y-1 hover:shadow-lg"><img${add_attribute("src", sand$1, 0)} alt="Customer 1" class="w-20 h-20 object-cover rounded-full mb-2 mx-auto"> <blockquote class="text-lg font-medium mb-4">&quot;I&#39;m amazed by the quality of their products. The leather shoes I bought from them are
 			incredibly comfortable and stylish.&quot;</blockquote> <p class="text-gray-600">John Smith</p></div> <div class="bg-white rounded-lg shadow-md p-6 transform transition-transform hover:-translate-y-1 hover:shadow-lg"><img${add_attribute("src", chair$1, 0)} alt="Customer 2" class="w-20 h-20 rounded-full mb-2 mx-auto"> <blockquote class="text-lg font-medium mb-4">&quot;The craftsmanship of their leather goods is outstanding. I&#39;ve been a customer for years and

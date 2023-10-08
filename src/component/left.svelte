@@ -1,14 +1,8 @@
 <!-- FurnitureGallery.svelte -->
 <script>
-	import { furnitureData } from '../../data/furniture';
-	import Navbar from '../../component/navbar.svelte';
-	let selectedItem = null;
+	import { furnitureData } from '$lib/furniture';
 
-	const navLinks = [
-		{ text: 'Segun Odumosu Band', url: '/music' },
-		{ text: 'Jazzon Interior', url: '/interior' },
-		{ text: 'Leather Work', url: '/shoes' }
-	];
+	let selectedItem = null;
 
 	function handleMouseOver(item) {
 		selectedItem = item;
@@ -19,13 +13,9 @@
 	}
 </script>
 
-<section>
-	<nav class="container mx-auto bg-black">
-		<Navbar links={navLinks} />
-	</nav>
-	<div
-		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto mt-5 max-md:px-4"
-	>
+<section class="container mx-auto text-center my-16">
+	<h1 class="font-bold text-2xl tracking-wider mt-5">Check Out Our Projects....</h1>
+	<div class="grid grid-cols-1 lg:grid-cols-4 gap-4 container mx-auto mt-5 max-md:px-4">
 		{#each furnitureData as item (item.id)}
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<!-- svelte-ignore a11y-mouse-events-have-key-events -->

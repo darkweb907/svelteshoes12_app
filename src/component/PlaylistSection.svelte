@@ -21,9 +21,12 @@
 
 <section class="bg-gray-100 p-8">
 	<div class="max-w-6xl mx-auto">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<h2 class="text-3xl font-semibold mb-4 cursor-pointern" on:click={() => goto('/')}>Home</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each playlists as playlist}
+				<!-- svelte-ignore a11y-invalid-attribute -->
 				<a
 					href="javascript:void(0)"
 					class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"

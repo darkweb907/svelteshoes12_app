@@ -29,7 +29,4 @@
 <Footer />
 
 <style>
-	.music {
-		overflow: hidden;
-	}
 </style>
