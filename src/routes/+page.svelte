@@ -134,26 +134,36 @@
 	</section>
 	<section class="sec py-24 bg-slate-100">
 		<div class="container mx-auto p-4">
-			<h3 class="mb-1 text-sm text-black font-semibold tracking-wider">What I Do</h3>
-			<h2 class="mb-3 text-2xl font-extrabold tracking-widest">SERVICE</h2>
+			<h2 class="mb-3 text-4xl text-blue-400 text-center font-extrabold tracking-widest">
+				Our Services
+			</h2>
 			<ul class="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-7 pr-6 mt-6">
 				<li>
-					<span>01.</span>
-					<h3 class="text-3xl max-sm:text-xl my-3 tracking-widest">Jazz Music</h3>
+					<a
+						href="/playlist"
+						class="text-3xl max-md:text-xl my-3 tracking-widest underline text-blue-400 hover:text-blue-700"
+						>Music</a
+					>
 					<p class="text-sm leading-6 text-gray-400">
 						Segun Odumosu is a highly talented musician and enterprising entrepreneur.
 					</p>
 				</li>
 				<li>
-					<span>02.</span>
-					<h3 class="text-3xl max-sm:text-xl my-3 tracking-widest">Interior Design</h3>
+					<a
+						href="/interior"
+						class="max-lg:text-2xl whitespace-nowrap ease-out text-3xl max-sm:text-xl my-3 tracking-widest underline text-blue-400 transition-all duration-400 hover:text-blue-700"
+						>Interior Design</a
+					>
 					<p class="text-sm leading-6 text-gray-400">
 						This is a short description elaborating the service you have mentioned above
 					</p>
 				</li>
 				<li>
-					<span>03.</span>
-					<h3 class="text-3xl max-sm:text-xl my-3 tracking-widest">Leather Design</h3>
+					<a
+						href="/shoes"
+						class="text-3xl max-sm:text-xl max-lg:text-2xl whitespace-nowrap my-3 tracking-widest underline text-blue-400 transition-all duration-400 hover:text-blue-700"
+						>Leather Design</a
+					>
 					<p class="text-sm leading-6 text-gray-400">
 						Explore our collection of high-quality leather shoes for men,woman and chidren in
 						different design.
