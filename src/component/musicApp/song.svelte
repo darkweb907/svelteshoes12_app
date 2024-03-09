@@ -6,13 +6,13 @@
 			id: 1,
 			title: 'Song 1',
 			artist: 'Artist 1',
-			url: 'https://ld-wt73.template-help.com/wt_prod-29724/audio/sound-1.mp3' // Update the path based on your project structure
+			url: 'https://sndup.net/xhsg/d' // Update the path based on your project structure
 		},
 		{
 			id: 2,
 			title: 'Song 2',
 			artist: 'Artist 2',
-			url: 'https://cdn.trendybeatz.com/audio/Asake-Terminator-(TrendyBeatz.com).mp3' // Update the path based on your project structure
+			url: 'https://sndup.net/c4m8/d' // Update the path based on your project structure
 		}
 		// Add more songs as needed
 	];

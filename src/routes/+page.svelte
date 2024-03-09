@@ -16,6 +16,9 @@
 	import Left from '../component/left.svelte';
 	import Footer from '../component/footer.svelte';
 
+	//modal
+	//end here
+
 	let images = [
 		welcome,
 		sand,

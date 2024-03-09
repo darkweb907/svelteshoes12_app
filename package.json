@@ -33,7 +33,9 @@
 		"gsap": "^3.12.2",
 		"nodemailer": "^6.9.5",
 		"sendgrid": "^5.2.3",
+		"svelte-dialog": "^0.2.0",
 		"svelte-scrollto": "^0.2.0",
+		"svelte-simple-modal": "^1.6.2",
 		"swiper": "^10.2.0"
 	}
 }
