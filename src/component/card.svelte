@@ -219,6 +219,7 @@
 			<div
 				class="relative group overflow-hidden rounded-lg shadow-md transition-transform duration-300 transform hover:scale-105"
 			>
+				<!-- svelte-ignore a11y-img-redundant-alt -->
 				<img src={fork} alt="Image 1" class="w-full h-full object-cover" />
 				<div
 					class="absolute inset-0 bg-black opacity-0 group-hover:opacity-60 transition-opacity"
