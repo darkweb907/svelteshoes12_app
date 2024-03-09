@@ -27,6 +27,8 @@
 		class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 container mx-auto mt-5 max-md:px-4"
 	>
 		{#each furnitureData as item (item.id)}
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
+			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 			<div
 				class="relative bg-white rounded-lg shadow-lg overflow-hidden"
 				on:mouseover={() => handleMouseOver(item)}

@@ -181,6 +181,14 @@ export const songs = [
     audioUrl: 'https://sndup.net/xhsg/d',
     downloadLink: 'https://sndup.net/xhsg/d',
   },
+  {
+    id: 24,
+    playlistId: 5,
+    title: 'Ise Aje',
+    artist: 'Artist 12',
+    audioUrl: 'https://sndup.net/c4m8/d',
+    downloadLink: 'https://sndup.net/c4m8/d',
+  },
   
 ];
 
@@ -204,5 +212,10 @@ export const playlists = [
     id: 4,
     name: 'Playlist 4',
     songs: [20,21,22,23], // Song IDs belonging to this playlist
+  },
+  {
+    id: 5,
+    name: 'Playlist 5',
+    songs: [24], // Song IDs belonging to this playlist
   },
 ];

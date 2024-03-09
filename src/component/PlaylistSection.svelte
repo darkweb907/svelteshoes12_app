@@ -5,12 +5,14 @@
 	import sand from '$lib/images/ese.jpg';
 	import logo from '$lib/images/ajo.jpg';
 	import give from '$lib/images/give.jpg';
+	import Aje from '$lib/images/ise aje.jpg';
 
 	const playlists = [
 		{ id: 1, name: 'Playlist 1', image: welcome },
 		{ id: 2, name: 'Playlist 2', image: sand },
 		{ id: 3, name: 'Playlist 3', image: logo },
-		{ id: 4, name: 'Playlist 4', image: give }
+		{ id: 4, name: 'Playlist 4', image: give },
+		{ id: 5, name: 'Playlist 5', image: Aje }
 		// Add more playlists as needed
 	];
 
@@ -21,9 +23,12 @@
 
 <section class="bg-gray-100 p-8">
 	<div class="max-w-6xl mx-auto">
+		<!-- svelte-ignore a11y-click-events-have-key-events -->
+		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
 		<h2 class="text-3xl font-semibold mb-4 cursor-pointern" on:click={() => goto('/')}>Home</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each playlists as playlist}
+				<!-- svelte-ignore a11y-invalid-attribute -->
 				<a
 					href="javascript:void(0)"
 					class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"

@@ -285,12 +285,6 @@
 </footer>
 
 <style>
-	.both {
-		position: absolute;
-		bottom: 36%;
-		left: 50%;
-		transform: translate(-50%, 0);
-	}
 	p {
 		font-size: 16px;
 	}

@@ -12,6 +12,9 @@
 	import welcome from '$lib/images/segun1.jpg';
 	import sand from '$lib/images/segun5.jpg';
 	import logo from '$lib/images/song.jpg';
+	import seg from '$lib/images/seg-1.png';
+	import Left from '../component/left.svelte';
+	import Footer from '../component/footer.svelte';
 
 	let images = [
 		welcome,
@@ -73,10 +76,10 @@
 	});
 </script>
 
-<nav>
-	<Navbar links={navLinks} />
-</nav>
 <div class="carousel-y bg-center flex flex-col items-center bac justify-center text-white px-5">
+	<nav>
+		<Navbar links={navLinks} />
+	</nav>
 	<h1 class="md:text-4xl text-lg text-center font-semibold mb-4 {isTextVisible ? 'fade-in' : ''}">
 		{#if isTextVisible}
 			{#each Array.from(typewriterHeading) as char, i}
@@ -97,17 +100,102 @@
 		>
 	</div>
 </div>
+<main>
+	<section class="first">
+		<div
+			class="detail max-sm:ml-0 ml-14 grid grid-cols-2 gap-10 max-sm:p-5 max-sm:grid-cols-1 items-center"
+		>
+			<div class="words max-sm:text-center max-md:mt-5">
+				<h5 class="font-medium tracking-wide mb-1 text-xs uppercase">
+					Music, the universal language that transcends boundaries
+				</h5>
+				<h2
+					class="font-bold max-lg:text-lg text-5xl capitalize leading-[3.5rem] mb-4 tracking-wider text-[#1a1a1a]"
+				>
+					I'm Segun Odumosu, Artisan-Creator.
+				</h2>
+				<p class="text-sm leading-6 text-gray-400">
+					Hi there! I'm Segun Odumosu, and I'm passionate about various creative pursuits. I have a
+					deep love for crafting beautiful shoes, expressing my soul through singing, and enhancing
+					spaces with my interior design skills.
+				</p>
+				<div class="button flex max-sm:justify-center mt-5">
+					<a
+						href="/contact"
+						class="p-3 flex gap-3 items-center rounded-full bg-red-500 hover:bg-white hover:border-2 hover:border-red-500 transition-all"
+						type="submit"><i class="fas fa-phone phone-icon" /> Contact Me!</a
+					>
+				</div>
+			</div>
+			<div class="img flex-1 flex justify-end">
+				<img class="max-lg:aspect-[1/1] object-cover" src={seg} alt="" />
+			</div>
+		</div>
+	</section>
+	<section class="sec py-24 bg-slate-100">
+		<div class="container mx-auto p-4">
+			<h2 class="text-4xl text-center font-extrabold tracking-widest">Our Services</h2>
+			<ul class="grid grid-cols-3 max-sm:grid-cols-1 max-md:grid-cols-2 gap-7 pr-6 mt-16">
+				<li>
+					<a
+						href="/playlist"
+						class="inline-block mb-6 text-3xl max-md:text-2xl my-3 tracking-widest font-semibold"
+						>Music</a
+					>
+					<p class="text-sm leading-6 text-gray-400">
+						Segun Odumosu is a highly talented musician and enterprising entrepreneur.
+					</p>
+				</li>
+				<li>
+					<a
+						href="/interior"
+						class="font-semibold inline-block mb-6 max-lg:text-2xl whitespace-nowrap ease-out text-3xl max-sm:text-3xl my-3 tracking-widest"
+						>Interior Design</a
+					>
+					<p class="text-sm leading-6 text-gray-400">
+						This is a short description elaborating the service you have mentioned above
+					</p>
+				</li>
+				<li>
+					<a
+						href="/shoes"
+						class="font-semibold inline-block mb-6 text-3xl max-sm:text-3xl max-lg:text-2xl whitespace-nowrap my-3 tracking-widest transition-all duration-400"
+						>Leather Design</a
+					>
+					<p class="text-sm leading-6 text-gray-400">
+						Explore our collection of high-quality leather shoes for men,woman and chidren in
+						different design.
+					</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="product">
+		<Left />
+	</section>
+	<footer class="mt-20">
+		<Footer />
+	</footer>
+</main>
 
 <style>
+	nav {
+		position: absolute;
+		top: 0;
+	}
+	.sec ul h3 {
+		font-family: Poppins, sans-serif;
+		font-weight: bolder;
+	}
 	.carousel-y {
-		position: fixed;
+		position: relative;
 		top: 0;
 		left: 0;
 		width: 100%;
 		height: 100vh;
 		background-size: cover;
 		background-position-y: -130px;
-		z-index: -1;
+		z-index: 0;
 		/* Add an overlay to the background image */
 	}
 	.carousel-y::before {
