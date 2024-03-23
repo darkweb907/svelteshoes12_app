@@ -16,7 +16,7 @@
 <section class="container mx-auto text-center my-16">
 	<h1 class="font-bold text-2xl tracking-wider mt-5">Check Out Our Projects....</h1>
 	<div class="grid grid-cols-1 lg:grid-cols-4 gap-4 container mx-auto mt-5 max-md:px-4">
-		{#each furnitureData as item (item.id)}
+		{#each furnitureData as item}
 			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<!-- svelte-ignore a11y-mouse-events-have-key-events -->
 			<div
