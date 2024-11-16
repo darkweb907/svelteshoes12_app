@@ -181,22 +181,6 @@ export const songs = [
     audioUrl: 'https://sndup.net/xhsg/d',
     downloadLink: 'https://sndup.net/xhsg/d',
   },
-  {
-    id: 24,
-    playlistId: 5,
-    title: 'Fi-Suru si',
-    artist: 'Artist 12',
-    audioUrl: 'http://sndup.net/tmmk2/d',
-    downloadLink: 'http://sndup.net/tmmk2/d',
-  },
-  {
-    id: 25,
-    playlistId: 5,
-    title: 'Majemi Lese',
-    artist: 'Artist 13',
-    audioUrl: 'http://sndup.net/3q6sy/d',
-    downloadLink: 'http://sndup.net/3q6sy/d',
-  },
   
 ];
 
@@ -220,10 +204,5 @@ export const playlists = [
     id: 4,
     name: 'Playlist 4',
     songs: [20,21,22,23], // Song IDs belonging to this playlist
-  },
-  {
-    id: 5,
-    name: 'Playlist 5',
-    songs: [24,25], // Song IDs belonging to this playlist
   },
 ];

@@ -25,6 +25,9 @@
 				<a href="https://www.linkedin.com/in/segun-odumosu-74a88b15b" class="text-white">
 					<i class="fab fa-linkedin fa-lg" />
 				</a>
+				<a href="https://www.linkedin.com/in/segun-odumosu-74a88b15b" class="text-white">
+					<i class="fab fa-youtube fa-lg" />
+				</a>
 				<a
 					href="https://www.instagram.com/invites/contact/?i=1g3cmxgu0lp1j&utm_content=hrhdrx0"
 					class="text-white"
