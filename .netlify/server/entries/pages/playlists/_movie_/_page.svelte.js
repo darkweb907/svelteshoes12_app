@@ -179,6 +179,22 @@ const songs = [
     artist: "Artist 11",
     audioUrl: "https://sndup.net/xhsg/d",
     downloadLink: "https://sndup.net/xhsg/d"
+  },
+  {
+    id: 24,
+    playlistId: 5,
+    title: "Fi Suru Si",
+    artist: "Artist 11",
+    audioUrl: "https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3",
+    downloadLink: "https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3"
+  },
+  {
+    id: 25,
+    playlistId: 5,
+    title: "Majemi Lese",
+    artist: "Artist 11",
+    audioUrl: "https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3",
+    downloadLink: "https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3"
   }
 ];
 const _page_svelte_svelte_type_style_lang = "";

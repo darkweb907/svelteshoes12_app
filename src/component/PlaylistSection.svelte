@@ -5,7 +5,7 @@
 	import sand from '$lib/images/ese.jpg';
 	import logo from '$lib/images/ajo.jpg';
 	import give from '$lib/images/give.jpg';
-	import Aje from '$lib/images/ise aje.jpg';
+	import Aje from '$lib/images/fi.jpg';
 
 	const playlists = [
 		{ id: 1, name: 'Playlist 1', image: welcome },
