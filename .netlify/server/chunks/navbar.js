@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as add_attribute, f as each, e as escape, h as null_to_empty } from "./ssr.js";
+import { c as create_ssr_component, f as add_attribute, d as each, e as escape, h as null_to_empty } from "./ssr.js";
 const logo = "/_app/immutable/assets/logo1.97a42822.png";
 const navbar_svelte_svelte_type_style_lang = "";
 const css = {

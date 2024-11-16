@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as subscribe, f as each, e as escape, d as add_attribute } from "../../../../chunks/ssr.js";
+import { c as create_ssr_component, b as subscribe, d as each, e as escape, f as add_attribute } from "../../../../chunks/ssr.js";
 import { p as page } from "../../../../chunks/stores.js";
 const songs = [
   {
@@ -179,6 +179,22 @@ const songs = [
     artist: "Artist 11",
     audioUrl: "https://sndup.net/xhsg/d",
     downloadLink: "https://sndup.net/xhsg/d"
+  },
+  {
+    id: 24,
+    playlistId: 5,
+    title: "Fi-Suru si",
+    artist: "Artist 12",
+    audioUrl: "http://sndup.net/tmmk2/d",
+    downloadLink: "http://sndup.net/tmmk2/d"
+  },
+  {
+    id: 25,
+    playlistId: 5,
+    title: "Majemi Lese",
+    artist: "Artist 13",
+    audioUrl: "http://sndup.net/3q6sy/d",
+    downloadLink: "http://sndup.net/3q6sy/d"
   }
 ];
 const _page_svelte_svelte_type_style_lang = "";

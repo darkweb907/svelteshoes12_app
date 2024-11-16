@@ -1,4 +1,4 @@
-import { c as create_ssr_component, d as add_attribute, f as each, e as escape, v as validate_component } from "../../../chunks/ssr.js";
+import { c as create_ssr_component, f as add_attribute, d as each, e as escape, v as validate_component } from "../../../chunks/ssr.js";
 import { N as Navbar } from "../../../chunks/navbar.js";
 import { F as Footer } from "../../../chunks/footer.js";
 const welcome = "/_app/immutable/assets/shoe3.14eeac21.jpg";

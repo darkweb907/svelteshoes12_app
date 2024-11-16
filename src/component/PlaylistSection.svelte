@@ -5,12 +5,14 @@
 	import sand from '$lib/images/ese.jpg';
 	import logo from '$lib/images/ajo.jpg';
 	import give from '$lib/images/give.jpg';
+	import suru from '$lib/images/fi.jpg';
 
 	const playlists = [
 		{ id: 1, name: 'Playlist 1', image: welcome },
 		{ id: 2, name: 'Playlist 2', image: sand },
 		{ id: 3, name: 'Playlist 3', image: logo },
-		{ id: 4, name: 'Playlist 4', image: give }
+		{ id: 4, name: 'Playlist 4', image: give },
+		{ id: 5, name: 'Playlist 5', image: suru }
 		// Add more playlists as needed
 	];
 
