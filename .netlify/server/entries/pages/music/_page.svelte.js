@@ -1,6 +1,14 @@
 import { c as create_ssr_component, f as add_attribute, e as escape, d as each, v as validate_component } from "../../../chunks/ssr.js";
 import { F as Footer } from "../../../chunks/footer.js";
 import { N as Navbar } from "../../../chunks/navbar.js";
+const video = "/_app/immutable/assets/playing.b22b89e5.mp4";
+let youtubeLink = "https://www.youtube.com/watch?v=vbXTVu9U7xE";
+const Model = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { isOpen = false } = $$props;
+  if ($$props.isOpen === void 0 && $$bindings.isOpen && isOpen !== void 0)
+    $$bindings.isOpen(isOpen);
+  return `  ${isOpen ? `<div class="fixed inset-0 z-50 flex items-center justify-center"><div class="absolute inset-0 bg-black opacity-50"></div> <div class="z-50 bg-white p-4 rounded-md shadow-md"> <iframe class="w-full h-96"${add_attribute("src", video, 0)} frameborder="0" allowfullscreen></iframe> <div class="flex justify-end mt-4"><a${add_attribute("href", youtubeLink, 0)} target="_blank" class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2">Watch on YouTube</a> <button class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md" data-svelte-h="svelte-2s71wc">Close</button></div></div></div>` : ``}`;
+});
 const lag = "/_app/immutable/assets/flute1.3988be24.jpg";
 const music_svelte_svelte_type_style_lang = "";
 const brandText = "About Our Brand";
@@ -19,14 +27,14 @@ const Song = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       id: 1,
       title: "Song 1",
       artist: "Artist 1",
-      url: "https://ld-wt73.template-help.com/wt_prod-29724/audio/sound-1.mp3"
+      url: "https://sndup.net/xhsg/d"
       // Update the path based on your project structure
     },
     {
       id: 2,
       title: "Song 2",
       artist: "Artist 2",
-      url: "https://cdn.trendybeatz.com/audio/Asake-Terminator-(TrendyBeatz.com).mp3"
+      url: "https://sndup.net/c4m8/d"
       // Update the path based on your project structure
     }
   ];
@@ -44,7 +52,8 @@ const Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     },
     { text: "Leather Work", url: "/shoes" }
   ];
-  return `<nav class="bg-black py-2">${validate_component(Navbar, "Navbar").$$render($$result, { links: navLinks }, {}, {})}</nav>  <main>${validate_component(Head, "Head").$$render($$result, {}, {}, {})} ${validate_component(Song, "Song").$$render($$result, {}, {}, {})} ${validate_component(Brand, "Brand").$$render($$result, {}, {}, {})}</main> ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
+  let isOpen = true;
+  return ` <nav class="bg-black py-2">${validate_component(Navbar, "Navbar").$$render($$result, { links: navLinks }, {}, {})}</nav>  <main>${validate_component(Head, "Head").$$render($$result, {}, {}, {})} ${validate_component(Song, "Song").$$render($$result, {}, {}, {})} ${validate_component(Brand, "Brand").$$render($$result, {}, {}, {})}</main>   ${validate_component(Model, "Model").$$render($$result, { isOpen }, {}, {})} ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}`;
 });
 export {
   Page as default
