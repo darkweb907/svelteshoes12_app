@@ -2,7 +2,7 @@
 <script>
 	import video from '$lib/images/playing.mp4';
 	export let isOpen = false;
-	let youtubeLink = 'https://www.youtube.com/watch?v=vbXTVu9U7xE';
+	let youtubeLink = 'https://youtu.be/70p8KzTXGqw?feature=shared';
 </script>
 
 {#if isOpen}

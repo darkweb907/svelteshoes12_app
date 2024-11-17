@@ -3,7 +3,7 @@ const welcome = "/_app/immutable/assets/love.cb372e20.jpg";
 const sand = "/_app/immutable/assets/ese.198ee4c3.jpg";
 const logo = "/_app/immutable/assets/ajo.f2df1b0d.jpg";
 const give = "/_app/immutable/assets/give.500828d0.jpg";
-const Aje = "/_app/immutable/assets/ise aje.cf85b0b7.jpg";
+const Aje = "/_app/immutable/assets/fi.5888898e.jpg";
 const PlaylistSection = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   const playlists = [
     {

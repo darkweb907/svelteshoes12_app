@@ -184,14 +184,22 @@ export const songs = [
   {
     id: 24,
     playlistId: 5,
+    title: 'Ise Aje Lanwa kiri',
+    artist: 'Artist 11',
+    audioUrl: 'https://dl.sndup.net/zt9m7/WhatsApp%20Audio%202024-11-17%20at%2082456%20AM.mpeg',
+    downloadLink: 'https://dl.sndup.net/zt9m7/WhatsApp%20Audio%202024-11-17%20at%2082456%20AM.mpeg',
+  },
+  {
+    id: 25,
+    playlistId: 6,
     title: 'Fi Suru Si',
     artist: 'Artist 11',
     audioUrl: 'https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3',
     downloadLink: 'https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3',
   },
   {
-    id: 25,
-    playlistId: 5,
+    id: 26,
+    playlistId: 6,
     title: 'Majemi Lese',
     artist: 'Artist 11',
     audioUrl: 'https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3',
@@ -224,6 +232,11 @@ export const playlists = [
   {
     id: 5,
     name: 'Playlist 5',
-    songs: [24 , 25], // Song IDs belonging to this playlist
+    songs: [24], // Song IDs belonging to this playlist
+  },
+  {
+    id: 6,
+    name: 'Playlist 6',
+    songs: [25 , 26], // Song IDs belonging to this playlist
   },
 ];
