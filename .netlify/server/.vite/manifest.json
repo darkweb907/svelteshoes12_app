@@ -248,6 +248,11 @@
     "file": "_app/immutable/assets/_page.6183951b.css",
     "src": "src/routes/+page.css"
   },
+  "src/routes/+page.js": {
+    "file": "entries/pages/_page.js",
+    "isEntry": true,
+    "src": "src/routes/+page.js"
+  },
   "src/routes/+page.svelte": {
     "assets": [
       "_app/immutable/assets/seg-1.168a4710.png"
