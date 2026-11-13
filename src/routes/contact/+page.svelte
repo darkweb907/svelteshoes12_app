@@ -52,7 +52,7 @@
 					>Submit</button
 				>
 			</div>
-			<p class="success">{form?.success || ''}</p>
+			<p class="success" role="status">{form?.success || form?.error || ''}</p>
 		</form>
 	</div>
 </main>

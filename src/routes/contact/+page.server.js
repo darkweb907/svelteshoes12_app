@@ -1,62 +1,42 @@
-import nodemailer from "nodemailer";
-
-let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: 'darkword907@gmail.com',
-    pass: 'bkettqkscaxgcqeb', 
-  }, 
-});
-
-transporter.verify(function (error, success) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log("Server is ready to take our messages");
-  }
-});
+import { fail } from '@sveltejs/kit';
+import { env } from '$env/dynamic/private';
+import { createEmailTransporter } from '$lib/email.js';
 
 export const actions = {
-    default: async ({ request }) => {
-        try {
-            const formData = await request.formData();
-            const email = formData.get("name");
-            const subject = formData.get("email");
-            const number = formData.get("number");
-            const body = formData.get("message");
-            let html = `Name: ${email}\nEmail: ${subject}\nMessage: ${body}`;
-            console.log(html)
-            const message = {
-              from: email,
-              to: 'barryopeyemi@gmail.com',
-              bcc: "hello@webjeda.com",
-              subject: subject,
-              text: `Name: ${email}\nNumber: ${number}\nMessage: ${body}`,
-              html: html,
-          };
+	default: async ({ request }) => {
+		const formData = await request.formData();
+		const name = formData.get('name');
+		const email = formData.get('email');
+		const number = formData.get('number');
+		const body = formData.get('message');
 
-            const sendEmail = async (message) => {
-                await new Promise((resolve, reject) => {
-                    transporter.sendMail(message, (err, info) => {
-                        if (err) {
-                            console.error(err);
-                            reject(err);
-                        } else {
-                            resolve(info);
-                        }
-                    });
-                });
-            };
+		if (
+			typeof name !== 'string' ||
+			typeof email !== 'string' ||
+			typeof number !== 'string' ||
+			typeof body !== 'string' ||
+			!name.trim() ||
+			!email.trim() ||
+			!body.trim()
+		) {
+			return fail(400, { error: 'Please complete all contact form fields.' });
+		}
 
-            await sendEmail(message);
+		try {
+			const transporter = createEmailTransporter();
+			await transporter.sendMail({
+				from: env.SMTP_FROM || env.SMTP_USER,
+				to: 'barryopeyemi@gmail.com',
+				bcc: 'hello@webjeda.com',
+				replyTo: email,
+				subject: `Contact form: ${email}`,
+				text: `Name: ${name}\nEmail: ${email}\nNumber: ${number}\nMessage: ${body}`
+			});
 
-            return {
-                success: "Email is sent",
-            };
-        } catch (error) {
-            console.error(error);
-        }
-    }
+			return { success: 'Email is sent' };
+		} catch (error) {
+			console.error('Contact email delivery failed:', error);
+			return fail(500, { error: 'Unable to send your message. Please try again later.' });
+		}
+	}
 };

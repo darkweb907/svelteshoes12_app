@@ -1,21 +1,23 @@
-import nodemailer from "nodemailer";
+import nodemailer from 'nodemailer';
+import { env } from '$env/dynamic/private';
 
-let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: 'darkword907@gmail.com',
-    pass: 'bkettqkscaxgcqeb', 
-  },
-});
+export function createEmailTransporter() {
+	const user = env.SMTP_USER;
+	const pass = env.SMTP_PASS;
 
-transporter.verify(function (error, success) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log("Server is ready to take our messages");
-  }
-});
+	if (!user || !pass) {
+		throw new Error('SMTP_USER and SMTP_PASS must be configured to send contact emails.');
+	}
 
-export default transporter;
+	const port = Number(env.SMTP_PORT || 587);
+	if (!Number.isInteger(port) || port < 1 || port > 65535) {
+		throw new Error('SMTP_PORT must be a valid port number.');
+	}
+
+	return nodemailer.createTransport({
+		host: env.SMTP_HOST || 'smtp.gmail.com',
+		port,
+		secure: port === 465,
+		auth: { user, pass }
+	});
+}

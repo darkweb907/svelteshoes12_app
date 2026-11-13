@@ -10,14 +10,23 @@
 		<div class="absolute inset-0 bg-black opacity-50" />
 		<div class="z-50 bg-white p-4 rounded-md shadow-md">
 			<!-- YouTube trailer -->
-			<iframe class="w-full h-96" src={video} frameborder="0" allowfullscreen />
+			<iframe
+				class="w-full h-96"
+				src={video}
+				title="Segun Odumosu music video"
+				frameborder="0"
+				allowfullscreen
+			/>
 			<div class="flex justify-end mt-4">
 				<a
 					href={youtubeLink}
 					target="_blank"
 					class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2">Watch on YouTube</a
 				>
-				<button on:click class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Close</button>
+				<button
+					on:click={() => (isOpen = false)}
+					class="bg-gray-300 text-gray-700 px-4 py-2 rounded-md">Close</button
+				>
 			</div>
 		</div>
 	</div>

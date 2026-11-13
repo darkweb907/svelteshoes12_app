@@ -1,6 +1,6 @@
 <!-- src/components/PlaylistSection.svelte -->
 <script>
-	import { goto } from '$app/navigation';
+	import { playlists, songs } from '../data/music.js';
 	import welcome from '$lib/images/love.jpg';
 	import sand from '$lib/images/ese.jpg';
 	import logo from '$lib/images/ajo.jpg';
@@ -9,38 +9,27 @@
 	import Ise from '$lib/images/ise.jpg';
 	import Adura from '$lib/images/Adura.jpeg';
 
-	const playlists = [
-		{ id: 1, name: 'Playlist 1', image: welcome },
-		{ id: 2, name: 'Playlist 2', image: sand },
-		{ id: 3, name: 'Playlist 3', image: logo },
-		{ id: 4, name: 'Playlist 4', image: give },
-		{ id: 5, name: 'Playlist 5', image: Ise },
-		{ id: 6, name: 'Playlist 6', image: Aje },
-		{ id: 7, name: 'Playlist 7', image: Adura }
-		// Add more playlists as needed
-	];
-
-	function navigateToPlaylist(playlistId) {
-		goto(`/playlists/${playlistId}`);
-	}
+	const playlistImages = [welcome, sand, logo, give, Ise, Aje, Adura];
+	const playlistCards = playlists.map((playlist, index) => ({
+		...playlist,
+		image: playlistImages[index],
+		songCount: songs.filter((song) => song.playlistId === playlist.id).length
+	}));
 </script>
 
 <section class="bg-gray-100 p-8">
 	<div class="max-w-6xl mx-auto">
-		<!-- svelte-ignore a11y-click-events-have-key-events -->
-		<!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-		<h2 class="text-3xl font-semibold mb-4 cursor-pointern" on:click={() => goto('/')}>Home</h2>
+		<a href="/" class="inline-block text-3xl font-semibold mb-4 hover:underline">Home</a>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each playlists as playlist}
-				<!-- svelte-ignore a11y-invalid-attribute -->
+			{#each playlistCards as playlist (playlist.id)}
 				<a
-					href="javascript:void(0)"
+					href="/playlists/{playlist.id}"
 					class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer"
-					on:click={() => navigateToPlaylist(playlist.id)}
 				>
 					<img src={playlist.image} alt={playlist.name} class="w-full h-48 object-cover" />
 					<div class="p-4">
 						<p class="text-lg font-semibold">{playlist.name}</p>
+						<p class="text-sm text-gray-600">{playlist.songCount} songs</p>
 					</div>
 				</a>
 			{/each}

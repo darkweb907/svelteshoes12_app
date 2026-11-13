@@ -1,60 +1,50 @@
+import { f as fail } from "../../../chunks/index.js";
+import { b as private_env } from "../../../chunks/shared-server.js";
 import nodemailer from "nodemailer";
-let transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
-  auth: {
-    user: "darkword907@gmail.com",
-    pass: "bkettqkscaxgcqeb"
+function createEmailTransporter() {
+  const user = private_env.SMTP_USER;
+  const pass = private_env.SMTP_PASS;
+  if (!user || !pass) {
+    throw new Error("SMTP_USER and SMTP_PASS must be configured to send contact emails.");
   }
-});
-transporter.verify(function(error, success) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log("Server is ready to take our messages");
+  const port = Number(private_env.SMTP_PORT || 587);
+  if (!Number.isInteger(port) || port < 1 || port > 65535) {
+    throw new Error("SMTP_PORT must be a valid port number.");
   }
-});
+  return nodemailer.createTransport({
+    host: private_env.SMTP_HOST || "smtp.gmail.com",
+    port,
+    secure: port === 465,
+    auth: { user, pass }
+  });
+}
 const actions = {
   default: async ({ request }) => {
+    const formData = await request.formData();
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const number = formData.get("number");
+    const body = formData.get("message");
+    if (typeof name !== "string" || typeof email !== "string" || typeof number !== "string" || typeof body !== "string" || !name.trim() || !email.trim() || !body.trim()) {
+      return fail(400, { error: "Please complete all contact form fields." });
+    }
     try {
-      const formData = await request.formData();
-      const email = formData.get("name");
-      const subject = formData.get("email");
-      const number = formData.get("number");
-      const body = formData.get("message");
-      let html = `Name: ${email}
-Email: ${subject}
-Message: ${body}`;
-      console.log(html);
-      const message = {
-        from: email,
+      const transporter = createEmailTransporter();
+      await transporter.sendMail({
+        from: private_env.SMTP_FROM || private_env.SMTP_USER,
         to: "barryopeyemi@gmail.com",
         bcc: "hello@webjeda.com",
-        subject,
-        text: `Name: ${email}
+        replyTo: email,
+        subject: `Contact form: ${email}`,
+        text: `Name: ${name}
+Email: ${email}
 Number: ${number}
-Message: ${body}`,
-        html
-      };
-      const sendEmail = async (message2) => {
-        await new Promise((resolve, reject) => {
-          transporter.sendMail(message2, (err, info) => {
-            if (err) {
-              console.error(err);
-              reject(err);
-            } else {
-              resolve(info);
-            }
-          });
-        });
-      };
-      await sendEmail(message);
-      return {
-        success: "Email is sent"
-      };
+Message: ${body}`
+      });
+      return { success: "Email is sent" };
     } catch (error) {
-      console.error(error);
+      console.error("Contact email delivery failed:", error);
+      return fail(500, { error: "Unable to send your message. Please try again later." });
     }
   }
 };
