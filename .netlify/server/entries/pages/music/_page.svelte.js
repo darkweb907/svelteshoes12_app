@@ -2,7 +2,7 @@ import { c as create_ssr_component, f as add_attribute, e as escape, d as each, 
 import { F as Footer } from "../../../chunks/footer.js";
 import { N as Navbar } from "../../../chunks/navbar.js";
 const video = "/_app/immutable/assets/playing.b22b89e5.mp4";
-let youtubeLink = "https://www.youtube.com/watch?v=vbXTVu9U7xE";
+let youtubeLink = "https://youtu.be/70p8KzTXGqw?feature=shared";
 const Model = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { isOpen = false } = $$props;
   if ($$props.isOpen === void 0 && $$bindings.isOpen && isOpen !== void 0)

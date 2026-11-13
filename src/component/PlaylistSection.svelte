@@ -7,6 +7,7 @@
 	import give from '$lib/images/give.jpg';
 	import Aje from '$lib/images/fi.jpg';
 	import Ise from '$lib/images/ise.jpg';
+	import Adura from '$lib/images/Adura.jpeg';
 
 	const playlists = [
 		{ id: 1, name: 'Playlist 1', image: welcome },
@@ -14,7 +15,8 @@
 		{ id: 3, name: 'Playlist 3', image: logo },
 		{ id: 4, name: 'Playlist 4', image: give },
 		{ id: 5, name: 'Playlist 5', image: Ise },
-		{ id: 6, name: 'Playlist 6', image: Aje }
+		{ id: 6, name: 'Playlist 6', image: Aje },
+		{ id: 7, name: 'Playlist 7', image: Adura }
 		// Add more playlists as needed
 	];
 

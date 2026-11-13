@@ -205,6 +205,14 @@ export const songs = [
     audioUrl: 'https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3',
     downloadLink: 'https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3',
   },
+  {
+    id: 27,
+    playlistId: 7,
+    title: 'Adura Wa Agba',
+    artist: 'Artist 12',
+    audioUrl: 'https://mp3tourl.com/audio/1794584887303-4b6fdcfa-1e0c-4fb9-ae40-fc4b59a34b42.ogg',
+    downloadLink: 'https://www.bulkshare.cloud/t/lWauf4ehvB',
+  },
   
 ];
 
@@ -238,5 +246,10 @@ export const playlists = [
     id: 6,
     name: 'Playlist 6',
     songs: [25 , 26], // Song IDs belonging to this playlist
+  },
+  {
+    id: 7,
+    name: 'Playlist 7',
+    songs: [27], // Song IDs belonging to this playlist
   },
 ];

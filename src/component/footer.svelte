@@ -39,7 +39,6 @@
 		<div class="footer-div">
 			<h3 class="text-xl font-semibold mb-2 text-white">Contact Us</h3>
 			<p class="text-white leading-6">
-				<strong>Address:<br /></strong> Jazzon villa Olubodun street, gasline Ifo<br />
 				<strong>Phone:<br /></strong> +2348130003233<br />
 				<strong>Email:<br /></strong> jazzonsegun@gmail.com
 			</p>

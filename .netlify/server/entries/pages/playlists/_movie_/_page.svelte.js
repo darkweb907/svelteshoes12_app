@@ -183,18 +183,34 @@ const songs = [
   {
     id: 24,
     playlistId: 5,
+    title: "Ise Aje Lanwa kiri",
+    artist: "Artist 11",
+    audioUrl: "https://dl.sndup.net/zt9m7/WhatsApp%20Audio%202024-11-17%20at%2082456%20AM.mpeg",
+    downloadLink: "https://dl.sndup.net/zt9m7/WhatsApp%20Audio%202024-11-17%20at%2082456%20AM.mpeg"
+  },
+  {
+    id: 25,
+    playlistId: 6,
     title: "Fi Suru Si",
     artist: "Artist 11",
     audioUrl: "https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3",
     downloadLink: "https://dl.sndup.net/tmmk2/AUD-20241113-WA0017.mp3"
   },
   {
-    id: 25,
-    playlistId: 5,
+    id: 26,
+    playlistId: 6,
     title: "Majemi Lese",
     artist: "Artist 11",
     audioUrl: "https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3",
     downloadLink: "https://dl.sndup.net/3q6sy/AUD-20241113-WA0018.mp3"
+  },
+  {
+    id: 27,
+    playlistId: 7,
+    title: "Adura Wa Agba",
+    artist: "Artist 12",
+    audioUrl: "https://mp3tourl.com/audio/1794584887303-4b6fdcfa-1e0c-4fb9-ae40-fc4b59a34b42.ogg",
+    downloadLink: "https://www.bulkshare.cloud/t/lWauf4ehvB"
   }
 ];
 const _page_svelte_svelte_type_style_lang = "";
